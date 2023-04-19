@@ -1,21 +1,26 @@
 {
-  "title": "Screen Capture to Shortcut F17",
-  "rules": [
-    {
-      "description": "Disable command+control+option+shift+, which triggers WiFi logging.",
-      "manipulators": [
+    "description": "Clipboard Area Screen Capture to F17",
+    "manipulators": [
         {
-          "from": {
-            "key_code": "f17",
-          },
-          "to": [
-            {
-              "key_code": "f13"
-            }
-          ],
-          "type": "basic"
+            "from": {
+                "key_code": "f17",
+                "modifiers": {
+                    "optional": [
+                        "any"
+                    ]
+                }
+            },
+            "to": [
+                {
+                    "key_code": "4",
+                    "modifiers": [
+                        "left_command",
+                        "left_control",
+                        "left_shift"
+                    ]
+                }
+            ],
+            "type": "basic"
         }
-      ]
-    }
-  ]
+    ]
 }
